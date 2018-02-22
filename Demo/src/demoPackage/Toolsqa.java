@@ -1,5 +1,6 @@
 package demoPackage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,6 +16,9 @@ public class Toolsqa {
 
 		driver.manage().window().maximize();
 		driver.get("http://toolsqa.com/automation-practice-form/");
+		
+		WebElement partiallink test= driver.findElement(By.id("Partial Link Test"));
+		
 
 	}
 
