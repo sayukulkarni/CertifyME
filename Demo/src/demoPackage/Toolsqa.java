@@ -24,7 +24,7 @@ public class Toolsqa {
 		partiallinktest.click();
 		
 		System.out.println("partial link test pass");
-		
+		driver.navigate().back();
 		
 		WebElement linktest= driver.findElement(By.linkText("Link Test"));
 		linktest.click();
