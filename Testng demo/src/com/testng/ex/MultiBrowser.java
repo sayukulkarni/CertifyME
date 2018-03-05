@@ -51,7 +51,7 @@ if(browser.equalsIgnoreCase("firefox")) {
 
 driver.get("http://www.store.demoqa.com"); 
 
-}
+
 
 // Once Before method is completed, Test method will start
 
