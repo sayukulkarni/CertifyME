@@ -13,7 +13,7 @@ public class Incognito {
 		// DesiredCapabilities cap=DesiredCapabilities.chrome();
 		//System.setProperty("webdriver.gecko.driver","D:\\Testing\\geckodriver\\geckodriver.exe");
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\chromedriver.exe");;
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
