@@ -17,6 +17,7 @@ public class Databasetest {
 
 			Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root","root");
 			
+			
 			/*Statement stmp =  con.createStatement();
 			ResultSet rs = stmp.executeQuery("select * from student");
 			while (rs.next())
