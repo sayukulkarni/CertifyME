@@ -1,6 +1,7 @@
 package demoPackage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,20 +14,23 @@ public class Linkscount {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Java\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://certifyme.in/");
-		//driver.get("https://www.facebook.com/");
+		//driver.manage().window().maximize();
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	        // Launch the application		
+	       // driver.get("http://demo.guru99.com/test/guru99home/");
+	        driver.get("http://demo.guru99.com/test/guru99home/scrolling.html");
+	        
+	        WebElement Element = driver.findElement(By.linkText("VBScript"));
+
+	        //This will scroll the web page till end.		
+	       // js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			
+	        js.executeScript("arguments[0].scrollIntoView();", Element);
+
 		
 		
-		//"a" is used for anchore tag
-		java.util.List<WebElement> Links=driver.findElements(By.tagName("a"));
-		System.out.println("total num of links are"+Links.size());
-		for(int i=1;i<=Links.size();i=i+1)
-		{
-			System.out.println(Links.get(i).getText());
-			
-			
-		}
+		
 		
 		
 		
